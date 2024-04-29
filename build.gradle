@@ -1,0 +1,20 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testImplementation 'junit:junit:4.13'
+
+    implementation  (
+            'org.seleniumhq.selenium:selenium-java:4.20.0',
+            'io.github.bonigarcia:webdrivermanager:5.8.0',
+    )
+
+}
